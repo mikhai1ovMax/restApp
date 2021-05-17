@@ -8,15 +8,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/main")
-public class MainPageView extends HttpServlet {
-    String string = "hi";
+@WebServlet(value = "/main")
+public class MainPage extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter messageWriter = response.getWriter();
-        messageWriter.println("<h1>" + string + "<h1>");
+        messageWriter.print("<html><body>");
+        messageWriter.println("<h1>" + "mainPage" + "<h1>");
+        messageWriter.print("</body></html>");
         messageWriter.close();
     }
 }

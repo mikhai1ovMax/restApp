@@ -1,0 +1,5 @@
+language: java
+jvm: oraclejdk15
+install: true
+script:
+  - mvn tomcat:run
