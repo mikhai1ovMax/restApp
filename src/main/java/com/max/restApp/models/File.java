@@ -16,8 +16,11 @@ public class File {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "file_status")
     private FileStatus fileStatus;
+    @Column(name = "text")
     private String text;
+    @Column(name = "created")
     private LocalDateTime created;
 
     @ManyToOne

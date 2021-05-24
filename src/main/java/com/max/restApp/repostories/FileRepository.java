@@ -6,6 +6,7 @@ import com.max.restApp.util.SessionBuilder;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class FileRepository implements GenericRepository<File>{
@@ -18,6 +19,7 @@ public class FileRepository implements GenericRepository<File>{
 
     @Override
     public File save(File object) {
+        object.setCreated(LocalDateTime.now());
         transaction = session.beginTransaction();
         session.update(object);
         transaction.commit();

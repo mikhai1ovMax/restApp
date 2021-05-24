@@ -5,10 +5,10 @@ import com.max.restApp.services.FileService;
 
 import java.util.List;
 
-public class FileRepository implements GenericRepository<File> {
+public class FileController implements GenericController<File> {
     FileService service;
 
-    public FileRepository() {
+    public FileController() {
         service = new FileService();
     }
 

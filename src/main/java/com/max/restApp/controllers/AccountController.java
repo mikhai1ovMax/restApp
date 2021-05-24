@@ -5,10 +5,10 @@ import com.max.restApp.services.AccountService;
 
 import java.util.List;
 
-public class AccountRepository implements GenericRepository<Account> {
+public class AccountController implements GenericController<Account> {
     AccountService service;
 
-    public AccountRepository() {
+    public AccountController() {
         service = new AccountService();
     }
 

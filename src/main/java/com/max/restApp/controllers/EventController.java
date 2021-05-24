@@ -5,10 +5,10 @@ import com.max.restApp.services.EventService;
 
 import java.util.List;
 
-public class EventRepository implements GenericRepository<Event> {
+public class EventController implements GenericController<Event> {
     EventService service;
 
-    public EventRepository() {
+    public EventController() {
         service = new EventService();
     }
 

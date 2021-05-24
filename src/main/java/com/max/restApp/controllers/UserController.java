@@ -5,10 +5,10 @@ import com.max.restApp.services.UserService;
 
 import java.util.List;
 
-public class UserRepository implements GenericRepository<User> {
+public class UserController implements GenericController<User> {
     UserService service;
 
-    public UserRepository() {
+    public UserController() {
         service = new UserService();
     }
 

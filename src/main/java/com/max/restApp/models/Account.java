@@ -15,10 +15,14 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "account_status")
     private AccountStatus accountStatus;
+    @Column(name = "email")
     private String email;
+    @Column(name = "codeword")
     private String codeword;
 
-    @OneToOne(mappedBy = "account")
+    @OneToOne
+    @JoinColumn(name = "user_id")
     private User user;
 }
