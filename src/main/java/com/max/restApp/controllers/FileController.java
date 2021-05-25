@@ -28,6 +28,11 @@ public class FileController implements GenericController<File> {
     }
 
     @Override
+    public File getById(Integer id) {
+        return service.getById(id);
+    }
+
+    @Override
     public void deleteById(int id) {
         service.deleteById(id);
 

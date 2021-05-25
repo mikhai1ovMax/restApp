@@ -28,6 +28,11 @@ public class AccountController implements GenericController<Account> {
     }
 
     @Override
+    public Account getById(Integer id) {
+        return service.getById(id);
+    }
+
+    @Override
     public void deleteById(int id) {
         service.deleteById(id);
     }

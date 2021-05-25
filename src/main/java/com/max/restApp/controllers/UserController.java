@@ -28,6 +28,11 @@ public class UserController implements GenericController<User> {
     }
 
     @Override
+    public User getById(Integer id) {
+        return service.getById(id);
+    }
+
+    @Override
     public void deleteById(int id) {
         service.deleteById(id);
 

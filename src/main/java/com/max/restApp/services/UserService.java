@@ -24,7 +24,12 @@ public class UserService implements GenericService<User> {
 
     @Override
     public User update(User object) {
-        return repository.save(object);
+        return repository.update(object);
+    }
+
+    @Override
+    public User getById(Integer id) {
+        return repository.getById(id);
     }
 
     @Override

@@ -21,7 +21,7 @@ public class FileRepository implements GenericRepository<File>{
     public File save(File object) {
         object.setCreated(LocalDateTime.now());
         transaction = session.beginTransaction();
-        session.update(object);
+        session.save(object);
         transaction.commit();
         return object;
     }
@@ -47,7 +47,7 @@ public class FileRepository implements GenericRepository<File>{
     @Override
     public void deleteById(Integer id) {
         transaction = session.beginTransaction();
-        Event object = new Event();
+        File object = new File();
         object.setId(id);
         session.delete(object);
         transaction.commit();

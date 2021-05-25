@@ -14,16 +14,18 @@ import java.time.LocalDateTime;
 @Table(name = "file", schema = "public")
 public class File {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @Column(name = "file_status")
     private FileStatus fileStatus;
     @Column(name = "text")
     private String text;
+    @Column(name = "format")
+    private String format;
     @Column(name = "created")
     private LocalDateTime created;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "user_id")
     private User user;
 }

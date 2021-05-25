@@ -28,6 +28,11 @@ public class EventController implements GenericController<Event> {
     }
 
     @Override
+    public Event getById(Integer id) {
+        return service.getById(id);
+    }
+
+    @Override
     public void deleteById(int id) {
         service.deleteById(id);
     }

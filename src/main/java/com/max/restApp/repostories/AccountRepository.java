@@ -18,7 +18,7 @@ public class AccountRepository implements GenericRepository<Account>{
     @Override
     public Account save(Account object) {
         transaction = session.beginTransaction();
-        session.update(object);
+        session.save(object);
         transaction.commit();
         return object;
     }

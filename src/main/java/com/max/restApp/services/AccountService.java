@@ -24,7 +24,12 @@ public class AccountService implements GenericService<Account> {
 
     @Override
     public Account update(Account object) {
-        return repository.save(object);
+        return repository.update(object);
+    }
+
+    @Override
+    public Account getById(Integer id) {
+        return repository.getById(id);
     }
 
     @Override

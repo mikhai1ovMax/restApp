@@ -23,7 +23,12 @@ public class FileService implements GenericService<File>{
 
     @Override
     public File update(File object) {
-        return repository.save(object);
+        return repository.update(object);
+    }
+
+    @Override
+    public File getById(Integer id) {
+        return repository.getById(id);
     }
 
     @Override

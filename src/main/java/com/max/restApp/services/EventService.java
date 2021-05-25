@@ -23,7 +23,12 @@ public class EventService implements GenericService<Event> {
 
     @Override
     public Event update(Event object) {
-        return repository.save(object);    }
+        return repository.update(object);    }
+
+    @Override
+    public Event getById(Integer id) {
+        return repository.getById(id);
+    }
 
     @Override
     public void deleteById(int id) {

@@ -18,7 +18,7 @@ public class EventRepository implements GenericRepository<Event> {
     @Override
     public Event save(Event object) {
         transaction = session.beginTransaction();
-        session.update(object);
+        session.save(object);
         transaction.commit();
         return object;
     }
