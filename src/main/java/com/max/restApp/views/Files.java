@@ -49,36 +49,36 @@ Files extends HttpServlet {
             }
         writer.println("</table><br>");
 
-        writer.println("<p>New file:</p>");
-        writer.println("<form method=\"POST\">");
-            writer.println("<label for=\"text\">Text</label>");
-            writer.println("<input name=\"text\" id=\"text\"><br>");
-            writer.println("<label for=\"format\">File format</label>");
-            writer.println("<input name=\"format\" id=\"format\"><br>");
-            writer.println("<label for=\"userId\">User id</label>");
-            writer.println("<input name=\"userId\" id=\"userId\" ><br>");
-            writer.println("<button>save</button>");
-        writer.println("</form><br>");
-
-        writer.println("<p>Edit file:</p>");
-        writer.println("<form method=\"PUT\">");
-        writer.println("<label for=\"id\">Id</label>");
-        writer.println("<input name=\"id\" id=\"id\"><br>");
-        writer.println("<label for=\"text\">Text</label>");
-        writer.println("<input name=\"text\" id=\"text\"><br>");
-        writer.println("<label for=\"format\">File format</label>");
-        writer.println("<input name=\"format\" id=\"format\"><br>");
-        writer.println("<label for=\"userId\">User id</label>");
-        writer.println("<input name=\"userId\" id=\"userId\"><br>");
-        writer.println("<button>update</button>");
-        writer.println("</form><br>");
-
-        writer.println("<p>Delete file:</p>");
-        writer.println("<form method=\"DELETE\">");
-        writer.println("<label for=\"id\">Id</label>");
-        writer.println("<input name=\"id\" id=\"id\"><br>");
-        writer.println("<button>delete</button>");
-        writer.println("</form>");
+//        writer.println("<p>New file:</p>");
+//        writer.println("<form method=\"POST\">");
+//            writer.println("<label for=\"text\">Text</label>");
+//            writer.println("<input name=\"text\" id=\"text\"><br>");
+//            writer.println("<label for=\"format\">File format</label>");
+//            writer.println("<input name=\"format\" id=\"format\"><br>");
+//            writer.println("<label for=\"userId\">User id</label>");
+//            writer.println("<input name=\"userId\" id=\"userId\" ><br>");
+//            writer.println("<button>save</button>");
+//        writer.println("</form><br>");
+//
+//        writer.println("<p>Edit file:</p>");
+//        writer.println("<form method=\"PUT\">");
+//        writer.println("<label for=\"id\">Id</label>");
+//        writer.println("<input name=\"id\" id=\"id\"><br>");
+//        writer.println("<label for=\"text\">Text</label>");
+//        writer.println("<input name=\"text\" id=\"text\"><br>");
+//        writer.println("<label for=\"format\">File format</label>");
+//        writer.println("<input name=\"format\" id=\"format\"><br>");
+//        writer.println("<label for=\"userId\">User id</label>");
+//        writer.println("<input name=\"userId\" id=\"userId\"><br>");
+//        writer.println("<button>update</button>");
+//        writer.println("</form><br>");
+//
+//        writer.println("<p>Delete file:</p>");
+//        writer.println("<form method=\"DELETE\">");
+//        writer.println("<label for=\"id\">Id</label>");
+//        writer.println("<input name=\"id\" id=\"id\"><br>");
+//        writer.println("<button>delete</button>");
+//        writer.println("</form>");
     }
 
     @Override
