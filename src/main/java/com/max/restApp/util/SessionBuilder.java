@@ -11,30 +11,13 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
 public class SessionBuilder {
-    private static Session session;
-
     private SessionBuilder(){
     }
 
     public static Session getSession() {
-        if(session == null)
-            openSession();
-        return session;
+        return  buildSessionFactory().openSession();
     }
 
-    public static Session refreshSession(){
-        session.close();
-        session = buildSessionFactory().openSession();
-        return session;
-    }
-
-    public static void openSession(){
-        session = buildSessionFactory().openSession();
-    }
-
-    public static void closeSession(){
-        session.close();
-    }
 
     private static SessionFactory buildSessionFactory() {
         SessionFactory sessionFactory;

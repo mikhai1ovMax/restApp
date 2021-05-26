@@ -1,5 +1,6 @@
 package com.max.restApp.repostories;
 
+import com.max.restApp.models.Account;
 import com.max.restApp.models.User;
 import com.max.restApp.util.SessionBuilder;
 import org.hibernate.Session;
@@ -11,42 +12,55 @@ public class UserRepository implements GenericRepository<User> {
     private Session session;
     private Transaction transaction;
 
-    public UserRepository(){
+    public UserRepository() {
         session = SessionBuilder.getSession();
     }
 
     @Override
     public User save(User object) {
+        Session session = SessionBuilder.getSession();
+        Transaction transaction = session.beginTransaction();
         transaction = session.beginTransaction();
         session.save(object);
         transaction.commit();
+        session.close();
         return object;
     }
 
     @Override
     public User update(User object) {
-        transaction = session.beginTransaction();
+        Session session = SessionBuilder.getSession();
+        Transaction transaction = session.beginTransaction();
         session.update(object);
         transaction.commit();
+        session.close();
         return object;
     }
 
     @Override
     public User getById(Integer id) {
-        return session.get(User.class, id);
+        Session session = SessionBuilder.getSession();
+        User object = session.get(User.class, id);
+        session.close();
+        return object;
     }
 
     @Override
     public List<User> getAll() {
-        return session.createQuery("from User").getResultList();
+        Session session = SessionBuilder.getSession();
+        List<User> objects = session.createQuery("from User ").getResultList();
+        session.close();
+        return objects;
     }
 
     @Override
     public void deleteById(Integer id) {
-        transaction = session.beginTransaction();
-        User user = new User();
-        user.setId(id);
-        session.delete(user);
+        Session session = SessionBuilder.getSession();
+        Transaction transaction = session.beginTransaction();
+        User object = new User();
+        object.setId(id);
+        session.delete(object);
         transaction.commit();
+        session.close();
     }
 }

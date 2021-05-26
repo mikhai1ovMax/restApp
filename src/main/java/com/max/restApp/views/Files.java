@@ -3,7 +3,6 @@ package com.max.restApp.views;
 import com.max.restApp.controllers.FileController;
 import com.max.restApp.models.File;
 import com.max.restApp.models.User;
-import lombok.var;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +14,8 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet("/files")
-public class Files extends HttpServlet {
+public class
+Files extends HttpServlet {
     FileController controller = new FileController();
 
     @Override
