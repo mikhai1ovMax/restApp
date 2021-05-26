@@ -20,7 +20,6 @@ public class EventRepository implements GenericRepository<Event> {
     public Event save(Event object) {
         Session session = SessionBuilder.getSession();
         Transaction transaction = session.beginTransaction();
-        transaction = session.beginTransaction();
         session.save(object);
         transaction.commit();
         session.close();

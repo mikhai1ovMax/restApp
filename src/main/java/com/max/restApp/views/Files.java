@@ -26,12 +26,12 @@ Files extends HttpServlet {
         PrintWriter writer = resp.getWriter();
         writer.println("<table>");
             writer.println("<tr>");
-                writer.println("<td>id</td>");
-                writer.println("<td>text</td>");
-                writer.println("<td>format</td>");
-                writer.println("<td>file status</td>");
-                writer.println("<td>time of creation</td>");
-                writer.println("<td>user id</td>");
+                writer.println("<td>Id</td>");
+                writer.println("<td>Text</td>");
+                writer.println("<td>Format</td>");
+                writer.println("<td>File status</td>");
+                writer.println("<td>Time of creation</td>");
+                writer.println("<td>User id</td>");
             writer.println("</tr>");
             for (var file : files) {
                 writer.println("<tr>");
@@ -97,8 +97,7 @@ Files extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        int i = Integer.parseInt(req.getParameter("id"));
-        controller.deleteById(i);
+        controller.deleteById(Integer.parseInt(req.getParameter("id")));
         doGet(req, resp);
     }
 

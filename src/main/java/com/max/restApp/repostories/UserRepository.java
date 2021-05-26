@@ -20,7 +20,6 @@ public class UserRepository implements GenericRepository<User> {
     public User save(User object) {
         Session session = SessionBuilder.getSession();
         Transaction transaction = session.beginTransaction();
-        transaction = session.beginTransaction();
         session.save(object);
         transaction.commit();
         session.close();

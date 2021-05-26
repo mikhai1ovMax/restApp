@@ -8,14 +8,12 @@ import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class AccountRepository implements GenericRepository<Account>{
-
+public class AccountRepository implements GenericRepository<Account> {
 
     @Override
     public Account save(Account object) {
         Session session = SessionBuilder.getSession();
         Transaction transaction = session.beginTransaction();
-        transaction = session.beginTransaction();
         session.save(object);
         transaction.commit();
         session.close();
