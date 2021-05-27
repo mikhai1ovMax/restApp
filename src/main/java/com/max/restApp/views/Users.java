@@ -31,7 +31,7 @@ public class Users extends HttpServlet {
         writer.println("<td>Last name</td>");
         writer.println("<td>Account id</td>");
         writer.println("</tr>");
-        for (var user : users) {
+        for (User user : users) {
             writer.println("<tr>");
             writer.println("<td>" + user.getId() + "</td>");
             writer.println("<td>" + user.getFirstName() + "</td>");

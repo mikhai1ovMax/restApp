@@ -29,7 +29,7 @@ public class Accounts extends HttpServlet {
         writer.println("<td>AccountStatus()</td>");
         writer.println("<td>User id</td>");
         writer.println("</tr>");
-        for (var account : accounts) {
+        for (Account account : accounts) {
             writer.println("<tr>");
             writer.println("<td>" + account.getId() + "</td>");
             writer.println("<td>" + account.getEmail() + "</td>");

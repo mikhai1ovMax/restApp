@@ -30,7 +30,7 @@ public class Events extends HttpServlet {
         writer.println("<td>Description</td>");
         writer.println("<td>user id</td>");
         writer.println("</tr>");
-        for (var event : events) {
+        for (Event event : events) {
             writer.println("<tr>");
             writer.println("<td>" + event.getId() + "</td>");
             writer.println("<td>" + event.getName() + "</td>");

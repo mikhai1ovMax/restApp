@@ -33,7 +33,7 @@ Files extends HttpServlet {
                 writer.println("<td>Time of creation</td>");
                 writer.println("<td>User id</td>");
             writer.println("</tr>");
-            for (var file : files) {
+            for (File file : files) {
                 writer.println("<tr>");
                     writer.println("<td>" + file.getId() + "</td>");
                     writer.println("<td>" + file.getText() + "</td>");
