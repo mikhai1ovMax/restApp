@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* com.max.restApp.views.MainPage
+web: mvn tomcat7:run
